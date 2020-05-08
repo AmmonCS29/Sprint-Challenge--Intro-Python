@@ -9,10 +9,10 @@ class City:
         self.name = name
         self.lat = lat
         self.lon = lon
-    # def __str__(self):
-    #     return f"City is {self.name} with location of {self.lat} {self.lon}"
-    # def __repr__(self):
-    #     return f"City({self.name}, {self.lat}, {self.lon})"
+    def __str__(self):
+        return f"City is {self.name} with location of {self.lat} {self.lon}"
+    def __repr__(self):
+        return f"City({self.name}, {self.lat}, {self.lon})"
 # We have a collection of US cities with population over 750,000 stored in the
 # file "cities.csv". (CSV stands for "comma-separated values".)
 #
@@ -80,16 +80,15 @@ input1 = input("Enter lat1, lon1 ").split(",")
 input2 = input("Enter lat2, lon2 ").split(",")
 lat1, lon1 = float(input1[0]), float(input1[1])
 lat2, lon2 = float(input2[0]), float(input2[1])
-  
 
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
   # within will hold the cities that fall within the specified region
   within = []
  
   for city in cities:
-    if city["lat"] <= lat1 and city["lat"] >= lat2:
-      print(city)
-
+      if city.lat <= max(lat1, lat2) and city.lat >= min(lat1, lat2):
+          if city.lon <=max(lon1, lon2) and city.lon >= min(lon1, lon2):
+              within.append(city)
  
 
   
