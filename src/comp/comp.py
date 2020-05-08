@@ -1,3 +1,5 @@
+### LOOK FOR HINTS IN THE WORDING AND SEARCH FOR BUILT IN FUNCTIONS
+
 # The following list comprehension exercises will make use of the 
 # defined Human class. 
 class Human:
@@ -20,6 +22,8 @@ humans = [
     Human("Igon", 41),
     Human("David", 31),
 ]
+
+### LOOK FOR HINTS IN THE WORDING AND SEARCH FOR BUILT IN FUNCTIONS
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with 'D':
@@ -74,3 +78,5 @@ print("Square root of ages:")
 import math
 h = [math.sqrt(h.age) for h in humans]
 print(h)
+
+### LOOK FOR HINTS IN THE WORDING AND SEARCH FOR BUILT IN FUNCTIONS
